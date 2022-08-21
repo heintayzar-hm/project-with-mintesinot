@@ -2,33 +2,82 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title id="title">freeCodeCamp Survey Form</title>
+    
     <link rel="stylesheet" href="css/style.css">
-   
+   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
   </head>
 
   <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script  src="js/index.js"></script>
-    <h1 id="title">freeCodeCamp Survey Form</h1>
-    <p id="description">This is the short explaination</p>
-    <form id="survey-form">
-<label id="name-label" for="name">Name</label>
-  <input id="name" type="text" placeholder="Enter your name" required />
-  <label id="email-label" for="email">Email</label>
-<input id="email" type="email" placeholder="Enter your email" required/>
-<label id="number-label"  for="number">Number</label>
-  <input id="number" type="number" placeholder="Enter your number" min="0" max="100" required/>
-  <select id="dropdown"><option value="One">One</option><option value="Two">Two</option></select>
-  <input type="radio" value="1" name="name">Definetly</input><br/>
-  <input type="radio" value="2" name="name">Definetly</input><br/>
-  <input type="radio" value="3" name="name">Definetly</input><br/>
+    <H1 class="bg-gray-300 font-bold text-center text-lg uppercase" id="title">Our project to survey form</H1>
+    <p id="description" class="text-sm font-thin text-center">Enter your bio in the form below</p>
+
+
+<div class="w-full ">
+  <img src="https://thumbs.dreamstime.com/b/fill-form-11461171.jpg" class="w-full fixed -z-10" alt="alt"/>
+  <div class="flex flex-col justify-center items-center z-10">
+ <form id="survey-form " class=" bg-blue-300  shadow-md rounded px-8 pt-6 pb-8 mb-4">
+  
+  <div class="">
+<label id="name-label" class="font-semibold block text-gray-700 test-sm mb-2" for="name">Name</label>
+    <input id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" type="text" placeholder="Enter your name" required />
+  <label id="email-label" class="font-semibold block text-gray-700 test-sm mb-2" for="email">Email</label>
+    <input id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" type="email" placeholder="Enter your email" required/>
+  <label id="number-label" class="font-semibold block text-gray-700 test-sm mb-2"  for="number">Number</label>
+  <input id="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" type="number" placeholder="Enter your number" min="0" max="100" required/>
+  </div>
+  <br />
+  <div class="">
+    <p class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline">What is your gender?</p>
+    <select id="dropdown" class=" my-3 block apperance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select><br/>
+  </div>
+  
+<div class="m-2">
+<p class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline">What number is your fav?</p>
+  <input type="radio" value="1" name="name">1</input><br/>
+  <input type="radio" value="2" name="name">2</input><br/>
+  <input type="radio" value="3" name="name">3</input><br/>
+</div>
+
+
+<div class="m-2">
+<p class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline">What check do you like the most?</p>
   <input type="checkbox" value="1">Check1</input><br/>
   <input type="checkbox" value="2">Check2</input><br/>
   <input type="checkbox" value="3">Check3</input><br/>
+</div>
 
-  <textarea></textarea><br/>
-<button id="submit" type="submit">Submit</button>
+<div class="m-2">
+<p class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline">Any comment to ask?</p>
+  <textarea rows="10" placeholder="comments here" class="form-control shadow appearance-none py-2 px-3 h-10 my-2 text-gray-700 leading-tight rounded border w-full focus:shadow-outline"></textarea><br/>
+</div>
+
+<button id="submit" type="submit" class="bg-blue-500 hover:bg-blue-700 rounded p-1 text-white font-bold hover:text-blue-800">Submit</button>
     </form>
+</div>
+
+</div>
+
+
+   
+
+
+
+
   </body>
 </html>
